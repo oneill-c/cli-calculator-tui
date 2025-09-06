@@ -34,3 +34,17 @@ func Sub(nums []float64) (float64, error) {
 	}
 	return sum, nil
 }
+
+func Mul(nums []float64) (float64, error) {
+	err := numsLengthGuard(nums)
+	if err != nil {
+		return 0, err
+	}
+
+	sum := 1.0
+	for _, x := range nums {
+		sum *= x
+	}
+
+	return sum, nil
+}
