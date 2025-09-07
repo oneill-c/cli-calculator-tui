@@ -1,6 +1,8 @@
 package compute
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func numsLengthGuard(nums []float64) error {
 	if (len(nums)) < 2 {
@@ -47,4 +49,17 @@ func Mul(nums []float64) (float64, error) {
 	}
 
 	return sum, nil
+}
+
+func Div(a float64, b float64) (float64, error) {
+	fmt.Println("I am here")
+
+	fmt.Println(a)
+	fmt.Println(b)
+
+
+	if b == 0 {
+		return 0, fmt.Errorf("cannot divide by 0")
+	}
+	return a / b, nil
 }
