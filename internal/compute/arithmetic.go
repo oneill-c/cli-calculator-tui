@@ -52,12 +52,6 @@ func Mul(nums []float64) (float64, error) {
 }
 
 func Div(a float64, b float64) (float64, error) {
-	fmt.Println("I am here")
-
-	fmt.Println(a)
-	fmt.Println(b)
-
-
 	if b == 0 {
 		return 0, fmt.Errorf("cannot divide by 0")
 	}
